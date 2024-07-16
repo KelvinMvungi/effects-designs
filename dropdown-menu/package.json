@@ -1,13 +1,13 @@
 {
-  "name": "dropdown-menu",
+  "name": "advanced-dropdown-menu",
   "version": "1.0.0",
-  "description": "",
+  "description": "A reusable extendable dropdown menu",
   "main": "script.js",
   "scripts": {
     "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Drac Zihper <draczihper@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "@eslint/js": "^9.7.0",
