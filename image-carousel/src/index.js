@@ -4,6 +4,16 @@ const buttons = document.querySelectorAll('[data-carousel-button]');
 const navButtons = document.querySelectorAll('.slider-nav button');
 let autoSlideInterval;
 
+function updateNavButtons(activeIndex) {
+	navButtons.forEach((button, index) => {
+		if (index === activeIndex) {
+			button.classList.add('active');
+		} else {
+			button.classList.remove('active');
+		}
+	});
+}
+
 function moveToNextSlide() {
 	const slides = document.querySelector('[data-slides]');
 	const activeSlide = slides.querySelector('[data-active]');
@@ -13,16 +23,6 @@ function moveToNextSlide() {
 	slides.children[newIndex].dataset.active = true;
 	delete activeSlide.dataset.active;
 	updateNavButtons(newIndex);
-}
-
-function updateNavButtons(activeIndex) {
-	navButtons.forEach((button, index) => {
-		if (index === activeIndex) {
-			button.classList.add('active');
-		} else {
-			button.classList.remove('active');
-		}
-	});
 }
 
 function startAutoSlide() {
