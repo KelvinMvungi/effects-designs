@@ -1,0 +1,58 @@
+*,
+* ::before,
+* ::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+}
+
+.carousel {
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+}
+
+.carousel > ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.slide {
+	position: absolute;
+	inset: 0;
+	opacity: 0;
+}
+
+.slide > img {
+	display: block;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.slide[data-active] {
+	opacity: 1;
+}
+
+.carousel-button {
+	position: absolute;
+	background: none;
+	border: none;
+	font-size: 4rem;
+	top: 50%;
+	transform: translateY(-50%);
+	color: rgba(255, 255, 255, 0.5);
+	cursor: pointer;
+}
+
+img {
+	width: 100px;
+}
+
+button > svg {
+	width: 100px;
+}
