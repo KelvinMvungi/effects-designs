@@ -4,55 +4,58 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Image Carousel</title>
+		<link
+			rel="icon"
+			href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22></text></svg>"
+		/>
 	</head>
 	<body>
 		<section aria-label="Newest Photo">
-			<div class="carousel">
-				<button class="carousel-button prev">
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						viewBox="0 0 24 24"
-						id="previous"
-					>
-						<path
-							d="M12,0A12,12,0,1,0,24,12,12.01,12.01,0,0,0,12,0Zm2.64,16.232a1,1,0,1,1-1.28,1.536l-6-5a1,1,0,0,1,0-1.536l6-5a1,1,0,1,1,1.28,1.536L9.562,12Z"
-						></path>
-					</svg>
-				</button>
-				<button class="carousel-button next">
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						viewBox="0 0 24 24"
-						id="next"
-					>
-						<path
-							d="M12 0a12 12 0 1 0 12 12A12.01 12.01 0 0 0 12 0Zm4.641 12.768-6 5a1 1 0 1 1-1.282-1.536L14.437 12 9.359 7.768a1 1 0 1 1 1.282-1.536l6 5a1 1 0 0 1 0 1.536Z"
-						></path>
-					</svg>
-				</button>
-				<ul>
-					<li class="slide">
-						<img src="./assets/andrew.jpg" alt="Two deer" />
-					</li>
-					<li class="slide">
-						<img
-							src="./assets/johannes.jpg"
-							alt="Green grass field"
-						/>
-					</li>
-					<li class="slide">
-						<img src="./assets/robert.jpg" alt="Mountain road" />
-					</li>
-				</ul>
+			<button class="carousel-button prev">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					viewBox="0 0 24 24"
 					id="previous"
+					fill="white"
 				>
 					<path
 						d="M12,0A12,12,0,1,0,24,12,12.01,12.01,0,0,0,12,0Zm2.64,16.232a1,1,0,1,1-1.28,1.536l-6-5a1,1,0,0,1,0-1.536l6-5a1,1,0,1,1,1.28,1.536L9.562,12Z"
 					></path>
 				</svg>
+			</button>
+			<button class="carousel-button next">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 24 24"
+					id="next"
+					fill="white"
+				>
+					<path
+						d="M12 0a12 12 0 1 0 12 12A12.01 12.01 0 0 0 12 0Zm4.641 12.768-6 5a1 1 0 1 1-1.282-1.536L14.437 12 9.359 7.768a1 1 0 1 1 1.282-1.536l6 5a1 1 0 0 1 0 1.536Z"
+					></path>
+				</svg>
+			</button>
+			<div class="carousel">
+				<ul>
+					<li class="slide" data-active>
+						<img
+							src="<%= require('./assets/nature-one.jpg') %>"
+							alt="A mountain"
+						/>
+					</li>
+					<li class="slide">
+						<img
+							src="<%= require('./assets/nature-four.jpg') %>"
+							alt="A grass"
+						/>
+					</li>
+					<li class="slide">
+						<img
+							src="<%= require('./assets/nature-five.jpg') %>"
+							alt="Ridge"
+						/>
+					</li>
+				</ul>
 			</div>
 		</section>
 	</body>
