@@ -5,8 +5,8 @@
  * @type {import("prettier").Config}
  */
 module.exports = {
-    trailingComma: 'es5',
+    trailingComma: 'all',
     tabWidth: 4,
-    semi: false,
+    semi: true,
     singleQuote: true,
-}
+};
