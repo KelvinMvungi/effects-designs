@@ -1,5 +1,7 @@
 module.exports = {
     root: true,
-    extends: ["airbnb-base", "prettier"],
-    rules: {},
+    extends: ['airbnb-base', 'prettier'],
+    rules: {
+        'no-undef': 'warn',
+    },
 };
